@@ -44,10 +44,14 @@
 		
   
     function findAllHtmlSpanInOneSection(sectionId) {
-	var con=document.getElementById("sectionId").getElementsByTagName("span").value;
-		if(con=="HTML"){
-			return document.getElementsByTagName("span");	
+	var con=document.getElementById("sectionId").getElementsByTagName("span");
+	var htmlspan=[];
+	for(var i = 0;i<con.length;i++){
+		if(con[i].innerHTML=="HTML"){
+			htmlspan.push(con[i]);
 		}
+		}
+		return htmlspan;
         // 返回某个section下所有span中内容为HTML的span标签
     }
 	
